@@ -41,7 +41,7 @@ export default {
   methods: {
     calculate: function(event) {
       let val = event.target.dataset.key;
-      this.num = this.num === "0" ? "" : this.num;
+      this.num = this.num === "0" ? "" : this.num.toString();
       switch (val) {
         case "=":
           this.num = rpn.calCommonExp(this.num);
@@ -50,7 +50,7 @@ export default {
           this.num = "";
           break;
         case "del":
-          this.num.length = this.num.length > 0 ? this.num.length - 1 : 0;
+          this.num = this.num.slice(0, this.num.length - 1);
           break;
         default:
           this.num = this.num + val;
