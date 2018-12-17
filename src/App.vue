@@ -33,6 +33,7 @@
         <div class="side-nav__body">
           <router-link role="tab" tabindex="0" class="side-nav__blog-post" to="./" exact>Home</router-link>
           <router-link role="tab" tabindex="0" class="side-nav__blog-post" to="./about" exact>About</router-link>
+          <router-link role="tab" tabindex="0" class="side-nav__blog-post" to="./calc" exact>Calc</router-link>
         </div>
         <div class="side-nav__version">Version @VERSION@</div>
       </div>
@@ -78,6 +79,19 @@ html {
 *,
 .loader #spinner {
   box-sizing: border-box;
+}
+
+* {
+  -webkit-touch-callout: none; /*系统默认菜单被禁用*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -khtml-user-select: none; /*早期浏览器*/
+  -moz-user-select: none; /*火狐*/
+  -ms-user-select: none; /*IE10*/
+  user-select: none;
+}
+
+input {
+  -webkit-user-select: auto; /*webkit浏览器*/
 }
 
 body,
